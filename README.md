@@ -1,6 +1,8 @@
 # async_function
 
-> A simple module for accessing the `AsyncFunction` class and type.
+> A simple Deno module for accessing the `AsyncFunction` class and type.
+
+## Why?
 
 Despite the `Function` class being in the default global scope, the `AsyncFunction` class is not. A workaround to get this type can be achieved by just using the following code:
 
@@ -9,7 +11,11 @@ const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;
 // credits: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/AsyncFunction
 ```
 
-Obviously, this is a little bit of nasty code that everyone may not want to have to include every time you need the `AsyncFunction` class. Therefore, I have created this Deno module to give you the `AsyncFunction` class just by importing it from the Deno third-party modules registry. Here is how you can get it working:
+Obviously, this is a little bit of nasty code that everyone may not want to have to include every time you need the `AsyncFunction` class. Therefore, I have created this Deno module to give you the `AsyncFunction` class just by importing it from the Deno third-party modules registry.
+
+## Usage
+
+Here is how you can import the `AsyncFunction` class:
 
 ```ts
 import { AsyncFunction } from "http://deno.land/x/async_function/mod.ts";
