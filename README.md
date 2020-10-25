@@ -1,4 +1,6 @@
-# A simple module for getting the `AsyncFunction` class
+# async_function
+
+> A simple module for accessing the `AsyncFunction` class and type.
 
 Despite the `Function` class being in the default global scope, the `AsyncFunction` class is not. A workaround to get this type can be achieved by just using the following code:
 
